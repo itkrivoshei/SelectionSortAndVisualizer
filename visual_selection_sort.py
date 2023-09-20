@@ -33,11 +33,12 @@ def visualize_numbers(canvas, root, numbers, current_index=None, next_index=None
     """
     if not root.winfo_exists():
         return
-    canvas.delete("all")
-    canvas.configure(bg=DraculaColors.BACKGROUND)
+
+    # Delete only the bars (tagged as "bar")
+    canvas.delete("bar")
 
     bar_width = canvas.winfo_width() / len(numbers)
-    max_height = canvas.winfo_height()
+    max_height = canvas.winfo_height() - 50  # Adjusted for increased top padding
     scale = max_height / max(numbers)
 
     colors = [DraculaColors.DEFAULT] * len(numbers)
@@ -49,14 +50,42 @@ def visualize_numbers(canvas, root, numbers, current_index=None, next_index=None
     for i, num in enumerate(numbers):
         canvas.create_rectangle(
             i * bar_width,
-            max_height - num * scale,
+            50 + (max_height - num * scale),  # Increased top padding
             (i + 1) * bar_width,
-            max_height,
+            50 + max_height,  # Increased top padding
             fill=colors[i],
-            outline=colors[i]
+            outline=colors[i],
+            tags="bar"  # Tag the bars for easy deletion
+        )
+        # Display the number above the bar
+        canvas.create_text(
+            i * bar_width + bar_width / 2,
+            40 + (max_height - num * scale),  # Adjusted for increased top padding
+            text=str(num),
+            fill=DraculaColors.BUTTON_FG,
+            tags="bar"
         )
     canvas.update()
     time.sleep(0.5)
+
+
+def draw_legend(canvas):
+    """Draw the color legend on the canvas."""
+    legend_y = 10  # Adjust this value to position the legend vertically
+    color_legend = [
+        (DraculaColors.CURRENT, "Current"),
+        (DraculaColors.NEXT, "Next"),
+        (DraculaColors.DEFAULT, "Default")
+    ]
+    for i, (color, label) in enumerate(color_legend):
+        canvas.create_rectangle(
+            10 + i * 150, legend_y, 80 + i * 150, legend_y + 20,
+            fill=color, outline=color
+        )
+        canvas.create_text(
+            95 + i * 150, legend_y + 10, text=label,
+            fill=DraculaColors.BUTTON_FG, anchor="w"
+        )
 
 
 def selection_sort_visualized(numbers, main_function):
@@ -73,6 +102,7 @@ def selection_sort_visualized(numbers, main_function):
 
     canvas = Canvas(root, bg=DraculaColors.BACKGROUND)
     canvas.pack(fill=tk.BOTH, expand=True)
+    draw_legend(canvas)
 
     exit_button = Button(
         root,
