@@ -44,7 +44,7 @@ def visualize_button_callback(_):
     if hasattr(manager, "window"):
         manager.window.attributes('-fullscreen', False)
 
-    numbers = [64, 34, 25, 12, 22, 11, 90]
+    numbers = [90, 64, 34, 25, 12, 22, 11]
     selection_sort_visualized(numbers, main)
 
     # Re-enable fullscreen mode
