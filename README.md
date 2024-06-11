@@ -1,45 +1,45 @@
-# SelectionSortVisualizer
+# 🔍 SelectionSortVisualizer
 
-A comprehensive Selection Sort implementation with integrated visual tests and a visualizer. Designed to work seamlessly on Replit.
+A fun and interactive way to learn Selection Sort with visual tests and an engaging visualizer, all set up for seamless use on Replit.
 
-## Live Demo
+## 🌐 Live Demo
 
-Check out the live demo on Replit: [Selection Sort Visualizer](https://replit.com/@itkrivoshei/Selection-Sort)
+Experience the live demo on Replit: [Selection Sort Visualizer](https://replit.com/@itkrivoshei/Selection-Sort)
 
-## Features
+## 🎨 Features
 
-- Visual representation of the Selection Sort algorithm.
-- Integrated visual tests for the sorting algorithm.
-- Dracula color palette for a pleasant user experience.
-- Fullscreen mode for better visualization.
+- **Visual Representation**: Watch the Selection Sort algorithm in action.
+- **Integrated Tests**: Run visual tests to see the sorting algorithm’s correctness.
+- **Dracula Theme**: Enjoy a visually appealing color palette.
+- **Fullscreen Mode**: Optimize your viewing experience with fullscreen visualization.
 
-## Files
+## 📁 Files Overview
 
-### main.py
+### `main.py`
 
-This is the main driver file that initializes the GUI and provides options to test the selection sort or visualize it. It uses `matplotlib` for the visualization.
+The main driver file. It initializes the GUI and provides options to test or visualize the selection sort algorithm using `matplotlib`.
 
-### selection_sort.py
+### `selection_sort.py`
 
-Contains the core implementation of the selection sort algorithm.
+Contains the core logic of the selection sort algorithm.
 
-### test_selection_sort.py
+### `test_selection_sort.py`
 
-Provides a set of tests for the selection sort algorithm and visualizes the test results using `matplotlib`.
+Includes tests for the selection sort algorithm and visualizes the test results using `matplotlib`.
 
-### visual_selection_sort.py
+### `visual_selection_sort.py`
 
-Visualizes the selection sort algorithm in action using `tkinter`.
+Brings the selection sort algorithm to life with a dynamic visualization using `tkinter`.
 
-## How to Run
+## 🚀 How to Run
 
 1. Visit the [Replit link](https://replit.com/@itkrivoshei/Selection-Sort).
-2. Click on the `Run` button.
+2. Click the `Run` button to start the visualizer.
 
-## Contributing
+## 🤝 Contributing
 
-Feel free to fork the project and submit pull requests. All contributions are welcome!
+We welcome all contributions! Fork the project, create a new branch, and submit a pull request to help us improve.
 
-## License
+## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the MIT License. Feel free to use and modify the code as needed.
