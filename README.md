@@ -1,5 +1,10 @@
 # 🔍 SelectionSortVisualizer
 
+<p align="center">
+  <img src="https://github.com/itkrivoshei/SelectionSortAndVisualizer/blob/main/SelectionSortAndVisualizer.gif" height="600">
+</p>
+
+
 A fun and interactive way to learn Selection Sort with visual tests and an engaging visualizer, all set up for seamless use on Replit.
 
 ## 🌐 Live Demo
